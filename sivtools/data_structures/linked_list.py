@@ -1,4 +1,4 @@
-"""Commonly Used Data Structures implemented in Python"""
+"""Implementation of Python list using Linked List"""
 
 from collections import abc
 import numbers

@@ -72,7 +72,10 @@ def test_pop_empty_list():
         test_list.pop()
 
 
-# def test_pop_beyond_range():
+def test_pop_beyond_range():
+    test_list = LinkedList([0, 1])
+    with pytest.raises(IndexError):
+        test_list.pop(10)
 
 
 def test_pop_list_with_single_item():
