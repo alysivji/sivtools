@@ -12,6 +12,9 @@ help:
 test: ## Can pass in parameters using p=''
 	pytest $(p)
 
+test_all:
+	detox
+
 test_cov:
 	pytest --cov=sivtools
 

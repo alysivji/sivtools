@@ -1,6 +1,7 @@
 # misc
 notifications:
   email: false
+sudo: false
 
 # python settings
 language: python
@@ -13,8 +14,12 @@ python:
 
 # install packages
 install:
-  - pip install -r requirements.txt
+  - pip install -r requirements_dev.txt
+  - pip install codecov
 
 # run test
 script:
-  - python -m pytest
+  - python -m pytest --cov
+
+after_success:
+  - codecov
