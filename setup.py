@@ -2,11 +2,18 @@ from setuptools import setup, find_packages
 
 from sivtools import __version__
 
+# Workaround to convert MD into RST for display in PyPI
+try:
+    import pypandoc
+    long_description = pypandoc.convert('README.md', 'rst')
+except(IOError, ImportError):
+    long_description = open('README.md').read()
+
 setup(
     name='sivtools',
     version=__version__,
     description="General purpose toolbox",
-    long_description="Pramatic programmers have their own toollbox",
+    long_description=long_description,
     classifiers=[
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',

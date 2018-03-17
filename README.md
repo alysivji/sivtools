@@ -5,9 +5,22 @@
 *Welcome to my toolbox. We got data structures and utilities.*<br />
 *We got everything you want. Honey, we know the `__name__`*
 
-## Dev Env
+## Installing Package
 
 ```console
-$ pip install -r requirements_dev.txt
-$ detox
+pip install sivtools
+```
+
+## Creating Development Environment
+
+Fork and clone
+
+```console
+pip install -r requirements_dev.txt
+```
+
+## Running Tests
+
+```console
+detox
 ```
