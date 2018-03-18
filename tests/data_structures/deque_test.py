@@ -1,5 +1,6 @@
-from sivtools.data_structures import Deque
 import pytest
+
+from sivtools.data_structures import Deque
 
 
 def test_create_empty_deque():

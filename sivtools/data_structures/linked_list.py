@@ -5,8 +5,9 @@ import numbers
 
 
 class Node(object):
-    """Node that holds data and a link to the next node"""
-
+    """
+    Node that holds data and a link to the next node
+    """
     def __init__(self, data, next_=None):
         self.data = data
         self.next_ = next_
@@ -16,7 +17,9 @@ class Node(object):
 
 
 class LinkedList(object):
-    """List implemented via Linked List"""
+    """
+    List implemented via Linked List
+    """
 
     # TODO: extend, remove, clear, sort, reverse, copy, __getitem__
 
@@ -28,7 +31,7 @@ class LinkedList(object):
             if isinstance(items, numbers.Number) or isinstance(items, str):
                 self.append(items)
             elif isinstance(items, abc.Iterable):
-                if items is not None:
+                if items is not None:  # pragma: no branch
                     for item in items:
                         self.append(item)
             else:
@@ -48,7 +51,9 @@ class LinkedList(object):
         self.length += 1
 
     def index(self, value):
-        """Return the index of the first item in value"""
+        """
+        Return the index of the first item in value
+        """
         curr = self._head
         counter = 0
 
@@ -60,7 +65,9 @@ class LinkedList(object):
         raise ValueError('{0} is not in list'.format(value))
 
     def insert(self, index, value):
-        """Inserts value at index"""
+        """
+        Inserts value at index
+        """
         if index == 0:
             node_to_insert = Node(value, self._head.next_)
             self._head = node_to_insert
@@ -73,18 +80,22 @@ class LinkedList(object):
             counter = 0
 
             while counter < index:
-                if counter + 1 == index:
+                if counter + 1 == index:  # pragma: no branch
                     node_to_insert = Node(value, curr.next_)
                     curr.next_ = node_to_insert
                 curr = curr.next_
                 counter += 1
 
     def is_empty(self):
-        """Checks to see if list is empty"""
+        """
+        Checks to see if list is empty
+        """
         return len(self) == 0
 
     def pop(self, index=None):
-        """Pop element at index from list and return"""
+        """
+        Pop element at index from list and return
+        """
         # default action is to pop last element
         if index is None:
             index = self.length - 1

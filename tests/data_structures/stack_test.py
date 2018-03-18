@@ -1,5 +1,6 @@
-from sivtools.data_structures import Stack
 import pytest
+
+from sivtools.data_structures import Stack
 
 
 def test_create_empty_stack():

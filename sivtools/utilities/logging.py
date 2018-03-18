@@ -1,21 +1,22 @@
 import logging
 
 
-def siv_logger(name='app', *, formatter=None, level=logging.DEBUG,
-               handler=logging.StreamHandler, handler_level=logging.DEBUG):
+DEFAULT_FORMAT_STRING = (
+    '[%(levelname)s] %(name)s:%(lineno)s (%(asctime)s) %(message)s')
+
+
+def siv_logger(name='app', *, format_str=DEFAULT_FORMAT_STRING,
+               level=logging.DEBUG, handler=logging.StreamHandler):
     """
     Wrapper for Standard Library logger with sane defaults
     """
 
     logger = logging.getLogger(name)
     logger.setLevel(level)
-
-    if formatter is None:
-        formatter = logging.Formatter(
-            '[%(levelname)s] %(name)s:%(lineno)s (%(asctime)s) %(message)s')
+    formatter = logging.Formatter(format_str)
 
     ch = handler()
-    ch.setLevel(handler_level)
+    ch.setLevel(level)
     ch.setFormatter(formatter)
     logger.addHandler(ch)
 
