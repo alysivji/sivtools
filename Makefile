@@ -18,5 +18,5 @@ test_all:
 test_cov:
 	pytest --cov=sivtools
 
-test_cov_html:
-	pytest --cov=sivtools --cov-report=html
+test_cov_view:
+	pytest --cov=sivtools --cov-report=html && open ./htmlcov/index.html

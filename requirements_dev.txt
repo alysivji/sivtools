@@ -1,5 +1,5 @@
 -r requirements.txt
-pytest
+pytest==3.4.2
 pytest-cov
 tox
 detox
