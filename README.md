@@ -1,6 +1,6 @@
 # SivTools
 
-[![Build Status](https://travis-ci.org/alysivji/sivtools.svg?branch=master)](https://travis-ci.org/alysivji/sivtools) [![codecov](https://codecov.io/gh/alysivji/sivtools/branch/master/graph/badge.svg)](https://codecov.io/gh/alysivji/sivtools)
+[![Build Status](https://travis-ci.org/alysivji/sivtools.svg?branch=master)](https://travis-ci.org/alysivji/sivtools) [![codecov](https://codecov.io/gh/alysivji/sivtools/branch/master/graph/badge.svg)](https://codecov.io/gh/alysivji/sivtools) [![Docs Status](https://readthedocs.org/projects/sivtools/badge/?version=latest&style=flat)](https://sivtools.readthedocs.io/en/latest/)
 
 *Welcome to my toolbox. We got data structures and utilities.*<br />
 *We got everything you want. Honey, we know the `__name__`*
