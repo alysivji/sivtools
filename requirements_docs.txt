@@ -1,4 +1,4 @@
 -r requirements.txt
 sphinx
 sphinxcontrib-napoleon
-sphinx_theme
+sphinx_rtd_theme
