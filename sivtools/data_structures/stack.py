@@ -2,14 +2,12 @@
 
 
 class Node:
-
     def __init__(self, value, next_node):
         self.value = value
         self.next_node = next_node
 
 
 class Stack:
-
     def __init__(self):
         self.head = None
 
@@ -36,7 +34,7 @@ class Stack:
 
     def pop(self):
         if self.is_empty():
-            raise IndexError('pop from empty stack')
+            raise IndexError("pop from empty stack")
 
         node_to_pop = self.head
         self.head = node_to_pop.next_node

@@ -10,7 +10,7 @@ def test_print_(capsys):
         return (arg1, arg2, kwarg1)
 
     # Act
-    my_func(1, 2, 'a')
+    my_func(1, 2, "a")
 
     # Assert
     out, err = capsys.readouterr()
@@ -24,13 +24,14 @@ def test_timer(capsys):
     @timer()
     def my_func(arg1, arg2, kwarg1=1):
         import time
+
         time.sleep(DELAY)
         return (arg1, arg2, kwarg1)
 
     # Act
-    my_func(1, 1, 'a')
+    my_func(1, 1, "a")
 
     # Assert
     out, err = capsys.readouterr()
-    elapsed_time = float(out.split(':')[1].split('s')[0])
+    elapsed_time = float(out.split(":")[1].split("s")[0])
     assert elapsed_time >= DELAY

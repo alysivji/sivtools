@@ -1,12 +1,16 @@
 import logging
 
 
-DEFAULT_FORMAT_STRING = (
-    '[%(levelname)s] %(name)s:%(lineno)s (%(asctime)s) %(message)s')
+DEFAULT_FORMAT_STRING = "[%(levelname)s] %(name)s:%(lineno)s (%(asctime)s) %(message)s"
 
 
-def siv_logger(name='app', *, format_str=DEFAULT_FORMAT_STRING,
-               level=logging.DEBUG, handler=logging.StreamHandler):
+def siv_logger(
+    name="app",
+    *,
+    format_str=DEFAULT_FORMAT_STRING,
+    level=logging.DEBUG,
+    handler=logging.StreamHandler
+):
     """
     Wrapper for Standard Library logger with sane defaults
     """

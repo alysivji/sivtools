@@ -2,7 +2,6 @@
 
 
 class Node:
-
     def __init__(self, value, prev_node, next_node):
         self.value = value
         self.prev_node = prev_node
@@ -10,7 +9,6 @@ class Node:
 
 
 class Deque:
-
     def __init__(self):
         self.head = None
         self.tail = None
@@ -70,7 +68,7 @@ class Deque:
     def pop_left(self):
         print(self)
         if self.head is None:
-            raise IndexError('retrieving item from empty deque')
+            raise IndexError("retrieving item from empty deque")
 
         # move pointers around
         node_to_pop = self.head
@@ -90,7 +88,7 @@ class Deque:
     def pop_right(self):
         print(self)
         if self.tail is None:
-            raise IndexError('retrieving item from empty deque')
+            raise IndexError("retrieving item from empty deque")
 
         # move pointers around
         node_to_pop = self.tail

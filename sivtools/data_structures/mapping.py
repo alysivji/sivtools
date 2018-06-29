@@ -15,7 +15,7 @@ class DotDict:
         if isinstance(mapping, abc.MutableMapping):
             self.__dict = dict(mapping)
         else:
-            raise TypeError('Requires mapping type')
+            raise TypeError("Requires mapping type")
 
         self.unallowed_attributes = []
         for name in mapping.keys():

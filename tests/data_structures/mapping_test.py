@@ -5,23 +5,23 @@ from sivtools.data_structures import DotDict
 
 def test_dotdict_get_item_by_key():
     sample_dict = {}
-    sample_dict['item'] = 'value'
+    sample_dict["item"] = "value"
 
     my_dict = DotDict(sample_dict)
 
-    assert my_dict.item == 'value'
+    assert my_dict.item == "value"
 
 
 def test_dotdict_nested():
     inside_dict = {}
-    inside_dict['inner_item'] = 'inner value'
+    inside_dict["inner_item"] = "inner value"
 
     sample_dict = {}
-    sample_dict['item'] = inside_dict
+    sample_dict["item"] = inside_dict
 
     my_dict = DotDict(sample_dict)
 
-    assert my_dict.item.inner_item == 'inner value'
+    assert my_dict.item.inner_item == "inner value"
 
 
 def test_create_dotdict_with_non_mapping():
@@ -39,8 +39,8 @@ def test_accessing_keyword_element():
     """
 
     sample_dict = {}
-    sample_dict['1str'] = 'value'
+    sample_dict["1str"] = "value"
 
     my_dict = DotDict(sample_dict)
 
-    assert '1str' in my_dict.unallowed_attributes
+    assert "1str" in my_dict.unallowed_attributes

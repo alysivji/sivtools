@@ -21,7 +21,7 @@ def test_create_list_with_single_element():
     test_list = LinkedList(0)
     assert len(test_list) == 1
 
-    test_list_str = LinkedList('item')
+    test_list_str = LinkedList("item")
     assert len(test_list_str) == 1
 
 
@@ -49,21 +49,21 @@ def test_list_insert():
     # Test inserting at front or -1
     initial_list = [0, 1, 2]
     test_list = LinkedList(initial_list)
-    test_list.insert(0, 'test')
-    assert test_list.index('test') == 0
-    test_list.insert(-1, 'test_negative_number')
-    assert test_list.index('test_negative_number') == 0
+    test_list.insert(0, "test")
+    assert test_list.index("test") == 0
+    test_list.insert(-1, "test_negative_number")
+    assert test_list.index("test_negative_number") == 0
 
     # Insert at end
     test_list_2 = LinkedList(initial_list)
     test_list_2.insert(10, 3)
     assert test_list_2.index(3) == 3
-    test_list_2.insert(4, 'test')
+    test_list_2.insert(4, "test")
 
     # Insert in middle
     test_list_3 = LinkedList(initial_list)
-    test_list_3.insert(1, 'test')
-    assert test_list_3.index('test') == 1
+    test_list_3.insert(1, "test")
+    assert test_list_3.index("test") == 1
 
 
 def test_pop_empty_list():

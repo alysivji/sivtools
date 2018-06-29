@@ -8,12 +8,13 @@ class Node(object):
     """
     Node that holds data and a link to the next node
     """
+
     def __init__(self, data, next_=None):
         self.data = data
         self.next_ = next_
 
     def __repr__(self):  # pragma: no cover
-        return 'Node: ' + str(self.data)
+        return "Node: " + str(self.data)
 
 
 class LinkedList(object):
@@ -62,7 +63,7 @@ class LinkedList(object):
                 return counter
             curr = curr.next_
             counter += 1
-        raise ValueError('{0} is not in list'.format(value))
+        raise ValueError("{0} is not in list".format(value))
 
     def insert(self, index, value):
         """
