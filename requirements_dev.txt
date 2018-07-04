@@ -1,5 +1,6 @@
 -r requirements.txt
-pytest==3.4.2
-pytest-cov
-tox
 detox
+pre-commit
+pytest-cov
+pytest==3.4.2
+tox

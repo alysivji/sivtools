@@ -9,7 +9,7 @@ def deconstruct(mapping: dict, extract: Union[str, list]) -> tuple:
     """Return deconstructed dictionary"""
     _mapping = dict(mapping)
 
-    if isinstance(extract, str):
+    if isinstance(extract, abc.Hashable):
         extracted_value = _mapping.pop(extract)
         return (extracted_value, _mapping)
 
