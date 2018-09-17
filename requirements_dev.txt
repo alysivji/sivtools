@@ -1,6 +1,7 @@
 -r requirements.txt
+bandit
 detox
 pre-commit
 pytest-cov
-pytest==3.4.2
+pytest
 tox
